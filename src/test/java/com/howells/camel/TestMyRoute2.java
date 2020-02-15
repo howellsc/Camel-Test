@@ -8,6 +8,7 @@ import org.apache.camel.test.spring.CamelSpringDelegatingTestContextLoader;
 import org.apache.camel.test.spring.CamelSpringRunner;
 import org.apache.camel.test.spring.MockEndpointsAndSkip;
 import org.apache.camel.test.spring.UseAdviceWith;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.annotation.DirtiesContext;
@@ -29,6 +30,7 @@ public class TestMyRoute2 {
 
     @DirtiesContext
     @Test
+    @Ignore
     public void test() throws Exception {
         endpoint.expectedMessageCount(1);
         producerTemplate.sendBody("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
